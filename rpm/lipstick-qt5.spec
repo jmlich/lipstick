@@ -38,6 +38,7 @@ BuildRequires:  pkgconfig(dbus-glib-1)
 BuildRequires:  pkgconfig(libresourceqt5)
 BuildRequires:  pkgconfig(ngf-qt5)
 BuildRequires:  pkgconfig(systemd)
+BuildRequires:  pkgconfig(libsystemd)
 BuildRequires:  pkgconfig(wayland-server)
 BuildRequires:  pkgconfig(usb-moded-qt5) >= 1.8
 BuildRequires:  pkgconfig(systemsettings) >= 0.5.28
@@ -46,9 +47,12 @@ BuildRequires:  pkgconfig(ssu-sysinfo)
 BuildRequires:  qt5-qttools-linguist
 BuildRequires:  pkgconfig(Qt5Gui)
 BuildRequires:  pkgconfig(Qt5WaylandClient)
+BuildRequires:  pkgconfig(Qt5OpenGLExtensions)
 BuildRequires:  doxygen
-BuildRequires:  qt5-qttools-qthelp-devel
-BuildRequires:  nemo-qml-plugin-systemsettings >= 0.5.27
+BuildRequires:  qt5-qtbase-private-devel
+
+Conflicts:   meegotouch-systemui < 1.5.7
+
 Obsoletes:   libnotificationsystem0
 Obsoletes:   %{name}-screenshot
 
