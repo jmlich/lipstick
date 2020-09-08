@@ -1,4 +1,4 @@
-system(qdbusxml2cpp ../../src/notifications/notificationmanager.xml -p notificationmanagerproxy -c NotificationManagerProxy -i lipsticknotification.h)
+system($$[QT_INSTALL_BINS]/qdbusxml2cpp ../../src/notifications/notificationmanager.xml -p notificationmanagerproxy -c NotificationManagerProxy -i lipsticknotification.h)
 
 TEMPLATE = app
 TARGET = notificationtool

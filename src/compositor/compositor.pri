@@ -1,4 +1,4 @@
-system(qdbusxml2cpp compositor.xml -a lipstickcompositoradaptor -c LipstickCompositorAdaptor -l LipstickCompositor -i lipstickcompositor.h)
+system($$[QT_INSTALL_BINS]/qdbusxml2cpp compositor.xml -a lipstickcompositoradaptor -c LipstickCompositorAdaptor -l LipstickCompositor -i lipstickcompositor.h)
 
 include(alienmanager/alienmanager.pri)
 

@@ -1,10 +1,8 @@
-system(qdbusxml2cpp notifications/notificationmanager.xml -a notifications/notificationmanageradaptor -c NotificationManagerAdaptor -l NotificationManager -i notificationmanager.h)
-system(qdbusxml2cpp screenlock/screenlock.xml -a screenlock/screenlockadaptor -c ScreenLockAdaptor -l ScreenLock -i screenlock.h)
-system(qdbusxml2cpp shutdownscreen.xml -a shutdownscreenadaptor -c ShutdownScreenAdaptor -l ShutdownScreen -i shutdownscreen.h)
-system(qdbusxml2cpp net.connman.vpn.Agent.xml -a connmanvpnagent -c ConnmanVpnAgentAdaptor -l VpnAgent -i vpnagent.h)
-system(qdbusxml2cpp -c ConnmanVpnProxy -p connmanvpnproxy net.connman.vpn.xml -i qdbusxml2cpp_dbus_types.h)
-system(qdbusxml2cpp -c ConnmanManagerProxy -p connmanmanagerproxy net.connman.manager.xml -i qdbusxml2cpp_dbus_types.h)
-system(qdbusxml2cpp -c ConnmanServiceProxy -p connmanserviceproxy net.connman.service.xml -i qdbusxml2cpp_dbus_types.h)
+system($$[QT_INSTALL_BINS]/qdbusxml2cpp notifications/notificationmanager.xml -a notifications/notificationmanageradaptor -c NotificationManagerAdaptor -l NotificationManager -i notificationmanager.h)
+system($$[QT_INSTALL_BINS]/qdbusxml2cpp screenlock/screenlock.xml -a screenlock/screenlockadaptor -c ScreenLockAdaptor -l ScreenLock -i screenlock.h)
+system($$[QT_INSTALL_BINS]/qdbusxml2cpp devicelock/devicelock.xml -a devicelock/devicelockadaptor -c DeviceLockAdaptor -l DeviceLock -i devicelock.h)
+system($$[QT_INSTALL_BINS]/qdbusxml2cpp screenshotservice.xml -a screenshotserviceadaptor -c ScreenshotServiceAdaptor -l ScreenshotService -i screenshotservice.h)
+system($$[QT_INSTALL_BINS]/qdbusxml2cpp shutdownscreen.xml -a shutdownscreenadaptor -c ShutdownScreenAdaptor -l ShutdownScreen -i shutdownscreen.h)
 
 TEMPLATE = lib
 TARGET = lipstick-qt5
