@@ -44,9 +44,8 @@ BuildRequires:  pkgconfig(systemsettings) >= 0.5.28
 BuildRequires:  pkgconfig(nemodevicelock)
 BuildRequires:  pkgconfig(ssu-sysinfo)
 BuildRequires:  qt5-qttools-linguist
-BuildRequires:  qt5-qtgui-devel >= 5.2.1+git24
-BuildRequires:  qt5-qtwayland-compositor-devel >= 5.9.5
-BuildRequires:  qt5-qtwayland-client-devel >= 5.9.5
+BuildRequires:  pkgconfig(Qt5Gui)
+BuildRequires:  pkgconfig(Qt5WaylandClient)
 BuildRequires:  doxygen
 BuildRequires:  qt5-qttools-qthelp-devel
 BuildRequires:  nemo-qml-plugin-systemsettings >= 0.5.27
