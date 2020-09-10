@@ -63,7 +63,7 @@ A QML toolkit for homescreen creation
 Summary:    Development files for lipstick
 License:    LGPLv2.1
 Requires:   %{name} = %{version}-%{release}
-Requires:   qt5-qtwayland-compositor-devel >= 5.9.5
+Requires:   pkgconfig(Qt5WaylandCompositor) >= 5.9.5
 
 %description devel
 Files useful for building homescreens.
