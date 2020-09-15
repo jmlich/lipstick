@@ -92,8 +92,7 @@ LipstickCompositor::LipstickCompositor()
     m_orientationLock = new MGConfItem("/lipstick/orientationLock", this);
     connect(m_orientationLock, &MGConfItem::valueChanged, this, &LipstickCompositor::orientationLockChanged);
 
-    connect(this, SIGNAL(visibleChanged(bool)), this, SLOT(onVisibleChanged(bool)));
-    QObject::connect(this, SIGNAL(afterRendering()), this, SLOT(windowSwapped()));
+    connect(m_window, SIGNAL(visibleChanged(bool)), this, SLOT(onVisibleChanged(bool)));
 
     // Load legacy settings from the config file and delete it from there
     QSettings legacySettings("nemomobile", "lipstick");
